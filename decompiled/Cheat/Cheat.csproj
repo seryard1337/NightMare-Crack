@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2450C74-D754-4CE8-B5A0-B96990A1F9F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cheat</RootNamespace>
+    <AssemblyName>Cheat</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="HighlightingSystem">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\HighlightingSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.Glazier.Runtime">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\SDG.Glazier.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetPak.Runtime">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\SDG.NetPak.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetTransport">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\SDG.NetTransport.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\Dev\Unturned\UnturnedServer\bin\Release\net48\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\Config.cs" />
+    <Compile Include="core\Entities.cs" />
+    <Compile Include="core\Log.cs" />
+    <Compile Include="core\Main.cs" />
+    <Compile Include="core\Menu.cs" />
+    <Compile Include="core\Utils.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="modules\Aimbot.cs" />
+    <Compile Include="modules\ChatSpam.cs" />
+    <Compile Include="modules\DisableBattlEyePanel.cs" />
+    <Compile Include="modules\ESP.cs" />
+    <Compile Include="modules\FreeCam.cs" />
+    <Compile Include="modules\hkDamageTool.cs" />
+    <Compile Include="modules\hkPlayer.cs" />
+    <Compile Include="modules\ItemVacuum.cs" />
+    <Compile Include="modules\Overrides.cs" />
+    <Compile Include="modules\Triggerbot.cs" />
+    <Compile Include="modules\VehicleNoclip.cs" />
+    <Compile Include="modules\Visuals.cs" />
+    <Compile Include="modules\WeaponMods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
